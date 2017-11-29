@@ -16,7 +16,7 @@ job(folderName+'/MNTLAB-'+branchName+'-main-build-job') {
             filterable()
             choiceType('SINGLE_SELECT')
             groovyScript {
-                script(readFileFromWorkspace('dsl/active_choice_branch1.groovy'))
+                script(readFileFromWorkspace('active_choice_branch1.groovy'))
                 fallbackScript('return ["error"]')
                 filterable(false)
             }
@@ -28,7 +28,7 @@ job(folderName+'/MNTLAB-'+branchName+'-main-build-job') {
             filterable()
             choiceType('CHECKBOX')
             groovyScript {
-                script(readFileFromWorkspace('dsl/active_choice_jobs.groovy'))
+                script(readFileFromWorkspace('active_choice_jobs.groovy'))
                 fallbackScript('return ["error"]')
                 filterable(false)
             }
@@ -74,7 +74,7 @@ for (i = 1; i <= childJobsNumber; i++) {
                 filterable()
                 choiceType('SINGLE_SELECT')
                 groovyScript {
-                    script(readFileFromWorkspace('dsl/active_choice_branch2.groovy'))
+                    script(readFileFromWorkspace('active_choice_branch2.groovy'))
                     fallbackScript('return ["error"]')
                     filterable(false)
                 }
